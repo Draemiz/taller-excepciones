@@ -1,16 +1,16 @@
 <configuration>
 
-    <appender name="CONSOLE"
+    <appender name="STDOUT"
               class="ch.qos.logback.core.ConsoleAppender">
 
         <encoder>
-            <pattern>%d{HH:mm:ss} %-5level %msg%n</pattern>
+            <pattern>%msg%n</pattern>
         </encoder>
 
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="STDOUT"/>
     </root>
 
 </configuration>

@@ -20,8 +20,8 @@ public class LeerContacto {
         try {
 
             FileReader archivo =
-                    //new FileReader("contactos.txt");
-            		new FileReader("fantasma.txt");
+                    new FileReader("contactos.txt");
+            		//new FileReader("fantasma.txt");
 
             lector = new BufferedReader(archivo);
 
@@ -37,15 +37,22 @@ public class LeerContacto {
 
             return true;
 
-        } catch (FileNotFoundException e) {
+         //catch (FileNotFoundException e) {
+            //log.error("Archivo no encontrado");
+            //return false;
+
+        //} catch (IOException e) {
+           // log.error("Error al leer archivo");
+            //return false;
+    } catch (IOException e) {
+
+        log.error("Error al leer archivo");
+
+        return false;
+
+    } catch (FileNotFoundException e) {
 
             log.error("Archivo no encontrado");
-
-            return false;
-
-        } catch (IOException e) {
-
-            log.error("Error al leer archivo");
 
             return false;
 

@@ -12,7 +12,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 String telefono = "123";
+		 String telefono = "0987654128";
 
 	        try {
 
@@ -23,9 +23,14 @@ public class Test {
 	                    "Gomez",
 	                    telefono);
 
-	            LeerContacto.leerContactos();
+	            boolean lecturaCorrecta =
+	                    LeerContacto.leerContactos();
 
-	            log.info("¡¡PROCESO EJECUTADO CORRECTAMENTE!!");
+	            if (lecturaCorrecta) {
+
+	                log.info("¡¡PROCESO EJECUTADO CORRECTAMENTE!!");
+
+	            }
 
 	        } catch (IllegalArgumentException e) {
 

@@ -37,22 +37,15 @@ public class LeerContacto {
 
             return true;
 
-         //catch (FileNotFoundException e) {
-            //log.error("Archivo no encontrado");
-            //return false;
-
-        //} catch (IOException e) {
-           // log.error("Error al leer archivo");
-            //return false;
-    } catch (IOException e) {
-
-        log.error("Error al leer archivo");
-
-        return false;
-
-    } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
 
             log.error("Archivo no encontrado");
+
+            return false;
+
+        } catch (IOException e) {
+
+            log.error("Error al leer archivo");
 
             return false;
 
